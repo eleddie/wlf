@@ -4,6 +4,9 @@ import { useContext } from "react";
 import { TeamContext } from "@/store";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
+import Constants from "expo-constants";
+
+const TEAM_DATA = Constants.expoConfig?.extra?.team;
 
 export default function IntroTeam() {
   const { team, setTeam } = useContext(TeamContext);
@@ -19,9 +22,11 @@ export default function IntroTeam() {
 
   return (
     <Screen>
-      <TouchableOpacity style={styles.backButton} onPress={handleBack}>
-        <MaterialCommunityIcons name="arrow-left" size={24} color="white" />
-      </TouchableOpacity>
+      {!TEAM_DATA && (
+        <TouchableOpacity style={styles.backButton} onPress={handleBack}>
+          <MaterialCommunityIcons name="arrow-left" size={24} color="white" />
+        </TouchableOpacity>
+      )}
       <View style={styles.container}>
         <Logo uri={team.image} />
         <View style={styles.textContainer}>

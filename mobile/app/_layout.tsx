@@ -1,9 +1,12 @@
 import { TeamProvider } from "@/store";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
+import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
 import "react-native-reanimated";
+import Constants from "expo-constants";
 
+const TEAM_DATA = Constants.expoConfig?.extra?.team;
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
@@ -12,11 +15,17 @@ export default function RootLayout() {
   }, []);
 
   return (
-    <TeamProvider>
-      <Stack screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="index" />
-        <Stack.Screen name="intro-team" />
-      </Stack>
-    </TeamProvider>
+    <>
+      <StatusBar style="light" />
+      <TeamProvider>
+        <Stack
+          screenOptions={{ headerShown: false }}
+          initialRouteName={TEAM_DATA ? "intro-team" : "index"}
+        >
+          <Stack.Screen name={"index"} redirect={!!TEAM_DATA} />
+          <Stack.Screen name={"intro-team"} />
+        </Stack>
+      </TeamProvider>
+    </>
   );
 }
