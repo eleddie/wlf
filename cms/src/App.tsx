@@ -1,25 +1,15 @@
 import "./App.css";
-import { useEffect, useState } from "react";
-import TeamData, { TeamDataType } from "./components/TeamData";
-import { getTeam } from "./api";
+import TeamData from "./components/TeamData";
+import TeamSelector from "./components/TeamSelector";
 
 function App() {
   const teamSlug = window.location.pathname.replace("/", "");
-  const [loading, setLoading] = useState(true);
-  const [team, setTeam] = useState<TeamDataType | undefined>();
 
-  useEffect(() => {
-    setLoading(true);
-    getTeam(teamSlug).then((data) => {
-      setTeam(data);
-      setLoading(false);
-    });
-  }, []);
-
-  if (loading || !team) {
-    return <div>Loading...</div>;
+  if (!teamSlug) {
+    return <TeamSelector />;
   }
-  return <TeamData {...team} slug={teamSlug} />;
+
+  return <TeamData slug={teamSlug} />;
 }
 
 export default App;

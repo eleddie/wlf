@@ -2,33 +2,47 @@ import { useEffect, useState } from "react";
 import ImagePicker from "./ImagePicker";
 import Colors from "./Colors";
 import { extractColors } from "extract-colors";
-import { updateTeam } from "../api";
+import { getTeam, updateTeam } from "../api";
 import { throttle } from "lodash";
+import { TeamDataType } from "../types";
 
-export type TeamDataType = {
+type TeamDataProps = {
   readonly slug: string;
-  readonly image?: string;
-  readonly name?: string;
-  readonly primaryColor?: string;
-  readonly secondaryColor?: string;
 };
 
-export default function TeamData({
-  slug,
-  image,
-  name,
-  primaryColor,
-  secondaryColor,
-}: TeamDataType) {
-  const [editedName, setEditedName] = useState(name);
-  const [editedImage, setEditedImage] = useState<string | undefined>(image);
-  const [editedPrimaryColor, setEditedPrimaryColor] = useState(primaryColor);
-  const [editedSecondaryColor, setEditedSecondaryColor] =
-    useState(secondaryColor);
+export default function TeamData({ slug }: TeamDataProps) {
+  const [loading, setLoading] = useState(true);
+  const [team, setTeam] = useState<TeamDataType | undefined>();
+
+  const [editedName, setEditedName] = useState<string | undefined>();
+  const [editedImage, setEditedImage] = useState<string | undefined>();
+  const [editedPrimaryColor, setEditedPrimaryColor] = useState<
+    string | undefined
+  >();
+  const [editedSecondaryColor, setEditedSecondaryColor] = useState<
+    string | undefined
+  >();
   const [palette, setPalette] = useState<string[]>([]);
 
   useEffect(() => {
-    // Extract colors from the edited image
+    setLoading(true);
+
+    getTeam(slug)
+      .then((data) => {
+        setTeam(data);
+        setEditedName(data.name);
+        setEditedImage(data.image);
+        setEditedPrimaryColor(data.primaryColor);
+        setEditedSecondaryColor(data.secondaryColor);
+
+        setLoading(false);
+      })
+      .catch(() => {
+        setLoading(false);
+      });
+  }, []);
+
+  useEffect(() => {
     if (editedImage) {
       extractColors(editedImage, {
         crossOrigin: "anonymous",
@@ -53,10 +67,12 @@ export default function TeamData({
     if (data?.image?.startsWith("http://localhost:3000")) {
       delete data.image;
     }
-    updateTeam(slug, data).then((data) => {
-      console.log(data);
-    });
+    updateTeam(slug, data);
   }, 1000);
+
+  if (loading || !team) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="flex flex-col justify-center gap-12">

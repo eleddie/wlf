@@ -5,6 +5,11 @@ export async function getTeam(slug: string) {
   return await response.json();
 }
 
+export async function getTeams() {
+  const response = await fetch(`${BASE_URL}/teams`);
+  return await response.json();
+}
+
 export async function updateTeam(slug: string, data: any) {
   const response = await fetch(`${BASE_URL}/team/${slug}`, {
     method: "PUT",
