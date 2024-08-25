@@ -28,7 +28,7 @@ function setTeamData(teamSlug, teamData) {
     ...teamData,
   };
 
-  fs.writeFileSync(dbPath, JSON.stringify(db));
+  fs.writeFileSync(dbPath, JSON.stringify(db, null, 2));
 }
 
 function getTeamData(teamSlug) {

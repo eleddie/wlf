@@ -1,1 +1,37 @@
-{"real-madrid":{"slug":"real-madrid","name":"Real Madrid","primaryColor":"#ffffff","secondaryColor":"#004996","image":"./db/images/real-madrid.svg"},"barcelona":{"slug":"barcelona","name":"FC Barcelona","image":"./db/images/barcelona.svg","primaryColor":"#004d98","secondaryColor":"#db0030"},"inter-miami":{"slug":"inter-miami","name":"Inter Miami","image":"./db/images/inter-miami.svg","primaryColor":"#000100","secondaryColor":"#f6b4cd"},"sporting":{"slug":"sporting","name":"Sporting","image":"./db/images/sporting.svg","primaryColor":"#008057","secondaryColor":"#ffffff"},"borussia-dortmund":{"slug":"borussia-dortmund","name":"Borussia Dortmund","image":"./db/images/borussia-dortmund.svg","primaryColor":"#ffd900","secondaryColor":"#000000"}}
+{
+  "real-madrid": {
+    "slug": "real-madrid",
+    "name": "Real Madrid",
+    "primaryColor": "#ffffff",
+    "secondaryColor": "#004996",
+    "image": "./db/images/real-madrid.svg"
+  },
+  "barcelona": {
+    "slug": "barcelona",
+    "name": "Barcelona",
+    "image": "./db/images/barcelona.svg",
+    "primaryColor": "#004d98",
+    "secondaryColor": "#db0030"
+  },
+  "inter-miami": {
+    "slug": "inter-miami",
+    "name": "Inter Miami",
+    "image": "./db/images/inter-miami.svg",
+    "primaryColor": "#f6b4cd",
+    "secondaryColor": "#000100"
+  },
+  "sporting": {
+    "slug": "sporting",
+    "name": "Sporting",
+    "image": "./db/images/sporting.svg",
+    "primaryColor": "#008057",
+    "secondaryColor": "#ffffff"
+  },
+  "borussia-dortmund": {
+    "slug": "borussia-dortmund",
+    "name": "Borussia Dortmund",
+    "image": "./db/images/borussia-dortmund.svg",
+    "primaryColor": "#ffd900",
+    "secondaryColor": "#000000"
+  }
+}

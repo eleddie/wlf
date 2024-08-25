@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`WLF app listening on port ${port}`);
 });
 
 app.get("/api/team/:teamSlug", (req, res) => {
