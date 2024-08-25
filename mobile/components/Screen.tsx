@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import { SafeAreaView, StyleSheet } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import Color from "color";
@@ -33,7 +32,6 @@ export default function Screen({ generic, children }: ScreenProps) {
       start={{ x: 0, y: 0.4 }}
       end={{ x: 1, y: 0.6 }}
     >
-      <StatusBar style="light" />
       <SafeAreaView style={{ flex: 1 }}>{children}</SafeAreaView>
     </LinearGradient>
   );

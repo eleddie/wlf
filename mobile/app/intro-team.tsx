@@ -13,9 +13,10 @@ export default function IntroTeam() {
   const router = useRouter();
 
   const handleBack = () => {
-    setTeam(undefined);
+    setTeam();
     router.navigate("/");
   };
+
   if (!team) {
     return null;
   }
