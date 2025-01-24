@@ -2,11 +2,11 @@ import Constants from "expo-constants";
 
 const team = Constants.expoConfig?.extra?.team;
 
-const tintColorLight = "#999";
-const tintColorDark = "#333";
+const tintColorLight = "#444";
+const tintColorDark = "#222";
 
-export const PRIMARY_COLOR = team?.primaryColor ?? "#999";
-export const SECONDARY_COLOR = team?.secondaryColor ?? "#333";
+export const PRIMARY_COLOR = team?.primaryColor ?? tintColorLight;
+export const SECONDARY_COLOR = team?.secondaryColor ?? tintColorDark;
 
 export const Colors = {
   light: {
