@@ -16,14 +16,14 @@ const mixGradient = (color1: string, color2: string) => {
 
 export default function Screen({ generic, children }: ScreenProps) {
   const { team } = useContext(TeamContext);
-  const colorStart = mixGradient(
-    generic || !team?.primaryColor ? PRIMARY_COLOR : team.primaryColor,
-    "#454545"
-  );
-  const colorEnd = mixGradient(
-    generic || !team?.secondaryColor ? SECONDARY_COLOR : team.secondaryColor,
-    "#212121"
-  );
+  const useGray = generic || !team?.primaryColor || !team?.secondaryColor;
+
+  const colorStart = useGray
+    ? PRIMARY_COLOR
+    : mixGradient(team.primaryColor, "#444");
+  const colorEnd = useGray
+    ? SECONDARY_COLOR
+    : mixGradient(team.secondaryColor, "#222");
 
   return (
     <LinearGradient
