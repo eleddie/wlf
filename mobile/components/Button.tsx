@@ -6,7 +6,7 @@ import { TeamContext } from "@/store";
 
 type ButtonProps = {
   readonly children: React.ReactNode;
-  readonly onPress: () => void;
+  readonly onPress?: () => void;
   readonly generic?: boolean;
 };
 
