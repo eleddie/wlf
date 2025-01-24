@@ -1,0 +1,23 @@
+{
+  "cli": {
+    "version": ">= 10.1.1"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "local:sim": {
+      "ios": {
+        "simulator": true
+      },
+      "channel": "local"
+    },
+    "production": {
+      "channel": "production-wlf"
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
