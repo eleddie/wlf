@@ -1,5 +1,5 @@
 {
-  "name": "wl-football",
+  "name": "wlf",
   "main": "expo-router/entry",
   "version": "1.0.0",
   "scripts": {
@@ -10,7 +10,10 @@
     "web": "expo start --web",
     "test": "jest --watchAll",
     "lint": "expo lint",
-    "initialize": "node scripts/generate-assets.js"
+    "initialize": "source .env && node scripts/initialize.js",
+    "build-all": "source .env && node scripts/build-all.js",
+    "update-all": "source .env && node scripts/update-all.js",
+    "submit-all": "source .env && node scripts/submit-all.js"
   },
   "jest": {
     "preset": "jest-expo"
@@ -29,6 +32,7 @@
     "expo-splash-screen": "~0.27.5",
     "expo-status-bar": "~1.12.1",
     "expo-system-ui": "~3.0.7",
+    "expo-updates": "~0.25.24",
     "expo-web-browser": "~13.0.3",
     "lodash": "^4.17.21",
     "react": "18.2.0",
