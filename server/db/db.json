@@ -8,17 +8,10 @@
   },
   "barcelona": {
     "slug": "barcelona",
-    "name": "Barcelona",
+    "name": "FC Barcelona",
     "image": "./db/images/barcelona.svg",
     "primaryColor": "#004d98",
     "secondaryColor": "#db0030"
-  },
-  "inter-miami": {
-    "slug": "inter-miami",
-    "name": "Inter Miami",
-    "image": "./db/images/inter-miami.svg",
-    "primaryColor": "#f6b4cd",
-    "secondaryColor": "#000100"
   },
   "sporting": {
     "slug": "sporting",
@@ -33,5 +26,145 @@
     "image": "./db/images/borussia-dortmund.svg",
     "primaryColor": "#ffd900",
     "secondaryColor": "#000000"
+  },
+  "inter-miami": {
+    "slug": "inter-miami",
+    "name": "Inter Miami",
+    "image": "./db/images/inter-miami.svg",
+    "primaryColor": "#f6b4cd",
+    "secondaryColor": "#000100"
+  },
+  "inter-milan": {
+    "slug": "inter-milan",
+    "name": "Inter Milan",
+    "image": "./db/images/inter-milan.svg",
+    "primaryColor": "#00239c",
+    "secondaryColor": "#000000"
+  },
+  "afc-ajax": {
+    "slug": "afc-ajax",
+    "name": "AFC Ajax",
+    "image": "./db/images/afc-ajax.svg",
+    "primaryColor": "#ffffff",
+    "secondaryColor": "#d2122e"
+  },
+  "manchester-city": {
+    "slug": "manchester-city",
+    "name": "Manchester City",
+    "image": "./db/images/manchester-city.svg",
+    "primaryColor": "#ffffff",
+    "secondaryColor": "#6caddf"
+  },
+  "arsenal-fc": {
+    "slug": "arsenal-fc",
+    "name": "Arsenal FC",
+    "image": "./db/images/arsenal-fc.svg",
+    "primaryColor": "#db0007",
+    "secondaryColor": "#ffffff"
+  },
+  "atletico-madrid": {
+    "slug": "atletico-madrid",
+    "name": "Atlético Madrid",
+    "image": "./db/images/atletico-madrid.svg",
+    "primaryColor": "#e8151e",
+    "secondaryColor": "#ffffff"
+  },
+  "caracas-fc": {
+    "slug": "caracas-fc",
+    "name": "Caracas FC",
+    "image": "./db/images/caracas-fc.svg",
+    "primaryColor": "#ee2722",
+    "secondaryColor": "#000000"
+  },
+  "chelsea-fc": {
+    "slug": "chelsea-fc",
+    "name": "Chelsea FC",
+    "image": "./db/images/chelsea-fc.svg",
+    "primaryColor": "#001489",
+    "secondaryColor": "#ffffff"
+  },
+  "fc-schalke-04": {
+    "slug": "fc-schalke-04",
+    "name": "FC Schalke 04",
+    "image": "./db/images/fc-schalke-04.svg",
+    "primaryColor": "#004b9c",
+    "secondaryColor": "#ffffff"
+  },
+  "juventus": {
+    "slug": "juventus",
+    "name": "Juventus",
+    "image": "./db/images/juventus.svg",
+    "primaryColor": "#000000",
+    "secondaryColor": "#ffffff"
+  },
+  "kks-lech-poznan": {
+    "slug": "kks-lech-poznan",
+    "name": "KKS Lech Poznań",
+    "image": "./db/images/kks-lech-poznan.svg",
+    "primaryColor": "#004b92",
+    "secondaryColor": "#ffffff"
+  },
+  "manchester-united": {
+    "slug": "manchester-united",
+    "name": "Manchester United",
+    "image": "./db/images/manchester-united.svg",
+    "primaryColor": "#da020e",
+    "secondaryColor": "#ffffff"
+  },
+  "olympique-lyonnais": {
+    "slug": "olympique-lyonnais",
+    "name": "Olympique Lyonnais",
+    "image": "./db/images/olympique-lyonnais.svg",
+    "primaryColor": "#ffffff",
+    "secondaryColor": "#0f23aa"
+  },
+  "paris-saint-germain": {
+    "slug": "paris-saint-germain",
+    "name": "Paris Saint-Germain",
+    "image": "./db/images/paris-saint-germain.svg",
+    "primaryColor": "#004170",
+    "secondaryColor": "#e30613"
+  },
+  "sk-slavia-praha": {
+    "slug": "sk-slavia-praha",
+    "name": "SK Slavia Praha",
+    "image": "./db/images/sk-slavia-praha.svg",
+    "primaryColor": "#ec162c",
+    "secondaryColor": "#ffffff"
+  },
+  "sl-benfica": {
+    "slug": "sl-benfica",
+    "name": "SL Benfica",
+    "image": "./db/images/sl-benfica.svg",
+    "primaryColor": "#e83030",
+    "secondaryColor": "#ffffff"
+  },
+  "boca-juniors": {
+    "slug": "boca-juniors",
+    "name": "Boca Juniors",
+    "image": "./db/images/boca-juniors.svg",
+    "primaryColor": "#103f79",
+    "secondaryColor": "#f3b229"
+  },
+  "america": {
+    "slug": "america",
+    "name": "América",
+    "image": "./db/images/america.svg",
+    "primaryColor": "#ffeb00",
+    "secondaryColor": "#003055"
+  },
+  "bayern-munchen": {
+    "slug": "bayern-munchen",
+    "name": "Bayern München",
+    "image": "./db/images/bayern-munchen.svg",
+    "primaryColor": "#dc052d",
+    "secondaryColor": "#ffffff"
+  },
+  "malaga-fc": {
+    "slug": "malaga-fc",
+    "name": "Málaga FC",
+    "image": "./db/images/malaga-fc.svg",
+    "primaryColor": "#00489a",
+    "secondaryColor": "#ffffff"
   }
 }

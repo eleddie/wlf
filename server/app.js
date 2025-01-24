@@ -10,9 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(cors());
 
-app.listen(port, () => {
-  console.log(`WLF app listening on port ${port}`);
-});
+app.listen(port, () => console.log(`WLF app listening on port ${port}`));
 
 app.get("/api/team/:teamSlug", (req, res) => {
   const teamSlug = req.params.teamSlug;
@@ -29,7 +27,7 @@ app.get("/images/:teamSlug", (req, res) => {
   res.end(img, "binary");
 });
 
-app.get("/api/teams", (req, res) => {
+app.get("/api/teams", (_, res) => {
   const teamsData = getTeamsData();
   for (const teamSlug in teamsData) {
     if (teamsData[teamSlug].image)
